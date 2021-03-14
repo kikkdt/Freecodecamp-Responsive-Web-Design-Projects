@@ -1,0 +1,304 @@
+:root {
+  --primary-color: #cc9a4f;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 10vh;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+label {
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  padding-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    line-height: 1;
+    padding-top: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 0.85rem;
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+hr {
+  width: 10vw;
+  height: 5px;
+  margin: 1.4rem auto;
+  background-color: var(--primary-color);
+  border: none;
+}
+
+ul {
+  color: #fff;
+  text-align: left;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+}
+
+#email,
+#submit {
+  margin: 10px 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  height: 2.5rem;
+  border: none;
+}
+
+#email {
+  width: 35%;
+  letter-spacing: 1px;
+}
+
+#submit {
+  width: 25%;
+  font-size: 1.2rem;
+  color: #fff;
+  background: var(--primary-color);
+  font-weight: 600;
+}
+
+#email:focus,
+#submit:focus {
+  border-color: rgb(163, 123, 63);
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(163, 123, 63, 0.8);
+}
+
+#submit:hover {
+  cursor: pointer;
+}
+
+.modal p {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.page-wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #1e2432;
+}
+
+#header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #2b2b2b;
+}
+
+.logo-container,
+.nav-bar,
+.cart {
+  display: flex;
+  margin: 50px;
+}
+
+.logo-container {
+  justify-content: flex-start;
+}
+
+.cart {
+  justify-content: flex-end;
+}
+
+#nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+  justify-content: space-around;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 50px;
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .logo-container,
+  .nav-bar,
+  .cart {
+    display: flex;
+    margin: 10px;
+  }
+
+  .nav-link {
+      font-size: 1rem;
+      margin: 0 20px;
+  }
+}
+
+#home {
+  background-image: linear-gradient(
+      180deg,
+      rgba(30, 36, 50, 0.8),
+      rgba(30, 36, 50, 1)
+    ),
+    url(https://cdn.khacten.com/wp-content/uploads/2017/03/vi-sen-3-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+}
+
+/* Section Description */
+
+.description-container {
+  width: 95%;
+  height: fit-content;
+  background: #252d3e;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.description-container div img {
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  align-self: center;
+}
+
+.col35 {
+  grid-column: 3/5;
+  width: 70%;
+  margin: 0 auto;
+}
+
+iframe {
+  display: block;
+  margin: 2rem auto;
+}
+
+/*Section Information Product*/
+.infor-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+}
+
+.infor-column {
+  background: #252d3e;
+  margin: 5rem 1rem;
+  border-radius: 10px;
+  z-index: 1;
+  box-shadow: 0 0 20px -5px rgb(253, 253, 253);
+  transition: transform 0.8s;
+}
+
+.infor-column:hover {
+  transform: translateY(-30px);
+}
+
+.infor-icon {
+  width: 130px;
+  height: 130px;
+  border: 10px solid var(--primary-color);
+  border-radius: 50%;
+  background: #252d3e;
+  display: flex;
+  justify-content: center;
+  margin: -90px auto 0;
+}
+
+.infor-icon img {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  object-fit: scale-down;
+}
+
+.infor {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1.4rem 1.4rem;
+}
+
+.infor p,
+ul li {
+  text-align: justify;
+}
+
+.infor ul {
+  padding-left: 0.5rem;
+}
+
+footer p {
+  background: #2b2b2b;
+  padding: 5px;
+}

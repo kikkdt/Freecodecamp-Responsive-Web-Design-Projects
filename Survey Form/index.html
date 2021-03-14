@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main style CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Title -->
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <header class="header text-center">
+            <h1 id="title">Developer Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us know the about world wide developers</p>
+        </header>
+
+        <form action="#" id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name:</label>
+                <input 
+                type="text" 
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+                >
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email:</label>
+                <input 
+                type="email" 
+                id="email"
+                class="form-control"
+                placeholder="Enter your email"
+                required
+                >
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age:</label>
+                <input 
+                type="number"
+                id="number"
+                class="form-control"
+                min="10"
+                max="99"
+                placeholder="Age"
+                >
+            </div>
+            <div class="form-group">
+                <p class="label-text">Nationality:</p>
+                <select name="Country" id="dropdown" class="form-control">
+                    <option disabled selected value>Select current nationality</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="USA">USA</option>
+                    <option value="Australia">Australia</option>
+                    <option value="India">India</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p class="label-text">Developer:</p>
+                <label>
+                    <input 
+                    type="radio" 
+                    name="Developer" 
+                    class="input-radio"
+                    value="Front-end"
+                    >
+                    Front-end
+                </label>
+                <label>
+                    <input 
+                    type="radio" 
+                    name="Developer" 
+                    class="input-radio"
+                    value="Back-end"
+                    >
+                    Back-end
+                </label>
+                <label>
+                    <input 
+                    type="radio" 
+                    name="Developer" 
+                    class="input-radio"
+                    value="Fullstack"
+                    >
+                    Fullstack
+                </label>
+            </div>
+            <div class="form-group">
+                <p class="label-text">
+                    What skill do you want to improve?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+                <label>
+                    <input 
+                    type="checkbox" 
+                    name="Improved"
+                    class="input-checkbox"
+                    value="Front-end"
+                    >
+                    Front-end
+                </label>
+                <label>
+                    <input 
+                    type="checkbox" 
+                    name="Improved" 
+                    class="input-checkbox"
+                    value="Back-end"
+                    >
+                    Back-end
+                </label>
+            </div>
+            <div class="form-group">
+                <p class="label-text">Any comment?</p>
+                <textarea
+                    id="comments"
+                    name="comment"
+                    class="input-textarea"
+                    placeholder="Enter your comment here..."
+                > </textarea>
+            </div>
+            <div class="form-group">
+                <button
+                type="submit"
+                id="submit"
+                class="submit-button"
+                >
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
